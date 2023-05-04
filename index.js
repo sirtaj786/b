@@ -2,14 +2,15 @@ const { json } = require("express")
 const express=require("express")
 const connect=require("./config/db")
 const userModel=require("./model/user.schema")
-const cors=require("cors")
+const cors=require('cors')
 const app=express()
-app.use(cors())
+app.use(cors());
+
 
 app.use(json())
 
 app.get("/test",(req,res)=>{
-    res.send("Home...")
+    res.send("Home.....")
 })
 app.get("/",(req,res)=>{
     res.send("working")
